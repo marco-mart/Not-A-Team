@@ -1,2 +1,2 @@
 # Not-A-Team
-"John Smith" 2-d platformer game project.
+"John Smith", a 2-d platformer game project.
