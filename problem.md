@@ -3,15 +3,28 @@
 ## Introduction
 
 ### 1.1 Purpose
-John Smith is a 2-d platformer, that's only purpose is to make you laugh and provide a fun game experience. Life is hard, and the world is crazy. (As of 02/26/2022 Russia is still at war with Ukraine.) *John Smith* is to be used as an escape into the satirical world of John Smith, a normal guy with a white-collar coporate job, who finds himself trapped in video game. As John Smith, you will fight enemies ranging from the IRS, to Brussels Sprouts.
+*John Smith* is a 2-d platformer, whose only purpose is to make you laugh and provide a fun game experience. Life is hard, and the world is crazy. (As of 02/26/2022 Russia is still at war with Ukraine.) *John Smith* is to be used as an escape into the satirical world of John Smith, a normal guy with a white-collar coporate job, who finds himself trapped in video game. As John Smith, you will fight enemies ranging from the IRS, to Brussels Sprouts.
 
 **A one-paragraph description of your product's purpose.**
 
 ### 1.2 Scope of Product
 
+In *John Smith*, you will play as John Smith and the abilities you will be able to have are:
+	- jump
+	- move left and right 
+	- wall jump
+	- use weapons
+There will be levels. You will be able to choose what level you want to play. 
+
+What it does not include:
+	- power-ups
+	- 
 **A short description of your product's scope (what it includes and what it does not include). Part of your problem statement might be useful here, but focus on the scope of the product.**
 
 ### 1.3 Acronyms, Abbreviations, Definitions
+
+2d: two dimensions. (Think of just the x-y plane ie. Cartesian plane, or a flat surface)
+Platformer: a game in which you jump platform to platform using a character.
 
 **Any important terms that are required to understand your project documents.**
 
@@ -25,6 +38,7 @@ John Smith is a 2-d platformer, that's only purpose is to make you laugh and pro
 
 ### 2.1 Context of Product
 
+We will build the game using the Unity platform. We will use Audacity to record the voice of John Smith. We will use Adobe to create artwork for the game.
 **Context or environment that your product will be in.**
 
 ### 2.2 Domain Model with Description
@@ -37,6 +51,7 @@ John Smith is a 2-d platformer, that's only purpose is to make you laugh and pro
 
 ### 2.4 User Characteristics and Expectations
 
+The user will be able to play as John Smith.
 **Describe your users and their abilities.**
 
 ### 2.5 Constraints
