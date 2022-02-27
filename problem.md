@@ -18,7 +18,7 @@ There will be levels. You will be able to choose what level you want to play.
 
 What it does not include:
 	- power-ups
-	- 
+	
 **A short description of your product's scope (what it includes and what it does not include). Part of your problem statement might be useful here, but focus on the scope of the product.**
 
 ### 1.3 Acronyms, Abbreviations, Definitions
