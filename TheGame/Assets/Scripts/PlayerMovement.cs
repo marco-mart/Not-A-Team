@@ -23,9 +23,9 @@ public class PlayerMovement : MonoBehaviour
         else if (hInput < 0) {
             transform.localScale = new Vector2(-1, 1);
         }
-
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space)) {
             body.velocity = new Vector2(body.velocity.x, Jump);
+        }
         
     }
 }
