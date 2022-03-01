@@ -14,7 +14,9 @@ In *John Smith*, you will play as John Smith and the abilities you will be able 
 	- move left and right 
 	- wall jump
 	- use weapons
-There will be levels. You will be able to choose what level you want to play. 
+	- have access to levels
+	- use a pause menu with various options (restart level, turn sound off, etc..)
+	- riveting non-sequiturs from John
 
 What it does not include:
 	- power-ups
@@ -46,12 +48,12 @@ We will build the game using the Unity platform. We will use Audacity to record 
 **Display and describe your domain model.**
 
 ### 2.3 Product Functions (general)
-
+The user can play as John Smith. As John Smith you can fight enemies, jump/wall-jump, run around, etc..
 **Basic overview of the capabilities of your product. This is not your list of functional requirements, but an overview. Part of your problem statement might be good here.**
 
 ### 2.4 User Characteristics and Expectations
 
-The user will be able to play as John Smith.
+Our users are anyone who can use the arrow keys, but really, anyone who is interested in our product.
 **Describe your users and their abilities.**
 
 ### 2.5 Constraints
@@ -60,10 +62,12 @@ The user will be able to play as John Smith.
 
 ### 2.6 Assumptions and Dependencies
 
+Our systems depends on Unity. The system should be able to run Unity.
 **Does your system depend on external software packages? System assumptions? If so, describe them.**
 
 ## Functional Requirements
 
+[User Stories](userstories.md)
 **In a standard requirements document, you would have a LONG list of functional requirements here. You should put a link to your user story page here.**
 
 ## System and Non-functional Requirements
