@@ -1,41 +1,25 @@
 # Requirements Specification for *John Smith*
 
-## Introduction
+## Problem: 
+The world is a scary place. The world is also a boring place. We do not have a solution for the former, but we do for the latter. *John Smith* is a 2-d platformer that is the cure.
 
-### 1.1 Purpose
 *John Smith* is a 2-d platformer, whose only purpose is to make you laugh and provide a fun game experience. Life is hard, and the world is crazy. (As of 02/26/2022 Russia is still at war with Ukraine.) *John Smith* is to be used as an escape into the satirical world of John Smith, a normal guy with a white-collar coporate job, who finds himself trapped in video game. As John Smith, you will fight enemies ranging from the IRS, to Brussels Sprouts.
-
-**A one-paragraph description of your product's purpose.**
 
 ### 1.2 Scope of Product
 
-In *John Smith*, you will play as John Smith and the abilities you will be able to have are:
-	- jump
-	- move left and right 
-	- wall jump
-	- use weapons
-	- have access to levels
-	- use a pause menu with various options (restart level, turn sound off, etc..)
-	- riveting non-sequiturs from John
-
-What it does not include:
-	- power-ups
-	
-**A short description of your product's scope (what it includes and what it does not include). Part of your problem statement might be useful here, but focus on the scope of the product.**
+In *John Smith*, you will play as John Smith. This includes being able to jump, run, wall jump, and use weapons. These abilities are needed to be able to get through the levels, which include: enemies, obstacles, and traps. 
 
 ### 1.3 Acronyms, Abbreviations, Definitions
 
 2d: two dimensions. (Think of just the x-y plane ie. Cartesian plane, or a flat surface)
 Platformer: a game in which you jump platform to platform using a character.
-
-**Any important terms that are required to understand your project documents.**
-
-### 1.4 References
-
-**Any external references needed to understand your project documents. Use URL links if possible.****
+C#: a programming language.
 
 ## General Description of Product
 
+We have never made a video game before, so it is hard to promise things that we are not sure we can keep. But, I do like hypotheticals.
+
+*John Smith* will have many playable levels. These levels are: the jungle, an office building, the desert, and whatever else wacky level we can think of. The main one that we will focus on is the office building. These levels will be full of obstacles, traps, and enemies that John Smith (you) will have to navigate (or slash) through. 
 **This section contains a longer but not exhaustive description of your product.**
 
 ### 2.1 Context of Product
