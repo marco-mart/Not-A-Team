@@ -28,7 +28,8 @@ We will build the game using the Unity platform. We will use Audacity to record 
 **Context or environment that your product will be in.**
 
 ### 2.2 Domain Model with Description
-
+Our domain model will start with our ideas and then learn and implement the syntax.  Next, we will then put the program together, then start testing our gamee for any bugs.
+Once our bugs have been fixed and our software is fully operational, we will be finished.
 **Display and describe your domain model.**
 
 ### 2.3 Product Functions (general)
@@ -41,7 +42,8 @@ Our users are anyone who can use the arrow keys, but really, anyone who is inter
 **Describe your users and their abilities.**
 
 ### 2.5 Constraints
-
+I feel the constraings will mostly be limited to the operating system we chose.  As well as the computer architectures we choose and the minimum requirements we will reguire
+to build and play this software game.
 **Describe any constraints on your system.**
 
 ### 2.6 Assumptions and Dependencies
@@ -50,26 +52,30 @@ Our systems depends on Unity. The system should be able to run Unity.
 **Does your system depend on external software packages? System assumptions? If so, describe them.**
 
 ## Functional Requirements
-
+Functional requirements we will meet are that the player be able to engage in gameplay along with interacting with the game world and its content.
+Players shall also be able to save their progress in the game, this is also a functional requirement that will be met.
 [User Stories](userstories.md)
 **In a standard requirements document, you would have a LONG list of functional requirements here. You should put a link to your user story page here.**
 
 ## System and Non-functional Requirements
-
+Non-functional requiremtns for our software will be its reliablility, security, usability and especially interoperablity and compatibility.
 ### 4.1 External Interface Requirements (User,Hardware,Software,Communications)
-
+The user should have a Microfsoft Windows 10 operating system. Most hardware should be able to run our program.
 **Describe what kinds of interfaces your product has, and what they do. Then list specific requirements using item numbers as NF.4.1.X.**
 
 ### 4.2 Performance Requirements
-
+Our product's performance needs will be low pertaining to hardware and operating systems.  However the game's interface will be more specific
+about the performance requirements needed.
 **Describe your product's performance needs. Then list specific requirements using item numbers as NF.4.2.X.**
 
 ### 4.3 Design Constraints
-
+Our design constraints will be using one type of IDE and Unity to make our game.  Another constraint is that we will be developing our game
+and a windows OS machine.
 **Describe external requirements that will constrain your design choices. Then list specific requirements using item numbers as NF.4.3.X.**
 
 ### 4.4 Quality Requirements
-
+Our quality requirements will be functional suitibilty, completeness, and appropriateness.  Reliability and performancce efficiency are also 
+our quality requirements.
 **What quality expectations do your users have? Is your system life-critical? Describe such issues, then list specific requirements using item numbers as NF.4.4.X.**
 
 ### 4.5 Other Requirements
