@@ -69,13 +69,24 @@ public class PlayerMovement : MonoBehaviour
         else if (onWall() && !isGrounded()) {
 
             if (horizontalInput == 0) {
+                // push John Smith to other direction
                 body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 10, 0);
-                transform.localScale = new Vector2(-Mathf.Sign(transform.localScale.x), transform.localScale.y);
+                print("Transform local scale: " + transform.localScale);
+                // flip John Smith to correct direction
+                if (transform.localScale.x > 0) {
+                    transform.localScale = new Vector2(-Mathf.Sign(transform.localScale.x) * transform.localScale.x, transform.localScale.y);
+                }
+                else {
+                    transform.localScale = new Vector2(Mathf.Sign(transform.localScale.x) * transform.localScale.x, transform.localScale.y);
+                }
+                print("Transform local scale: " + transform.localScale);
             }
             else {
                 // wall jump in opposite direction as wall 
                 // ex. left and up or right and up
+                print("Else Transform local scale: " + transform.localScale);
                 body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 10, 10);
+                print("Else Transform local scale: " + transform.localScale);
             }
 
             wallJumpCoolDown = 0;
