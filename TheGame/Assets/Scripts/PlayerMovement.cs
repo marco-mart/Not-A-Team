@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float Speed;
     [SerializeField] private float jumpPower;
     [SerializeField] private LayerMask groundLayer;
-      [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private LayerMask wallLayer;
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxCollider;
@@ -28,9 +28,9 @@ public class PlayerMovement : MonoBehaviour
         // flip John Smith left or right depending on
         // which direction he is going
         if (horizontalInput > 0) 
-            transform.localScale = new Vector2(1, 1);
+            transform.localScale = new Vector2(3, 3);
         else if (horizontalInput < 0)
-            transform.localScale = new Vector2(-1, 1);
+            transform.localScale = new Vector2(-3, 3);
 
         //set animator parameters
         anim.SetBool("run", horizontalInput != 0);
