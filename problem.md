@@ -31,9 +31,7 @@ We have never made a video game before, so it is hard to promise things that we 
   
 ### 2.1 Context of Product 
 
-We will build the game using the Unity platform. We will use Audacity to record the voice of John Smith. We will use Adobe to create artwork for the game, including sprites  
-
-and user interfaces.  
+We will build the game using the Unity platform. We will use Audacity to record the voice of John Smith. We will use Adobe to create artwork for the game, including sprites and user interfaces.  
 
 
 ### 2.2 Domain Model with Description 
