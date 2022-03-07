@@ -27,7 +27,8 @@ none
 1 person-hour
 
 ## Acceptance Test:
-- As you move around as John Smith on the screen, the camera must follow John Smith, and keep him centered at all times.
+- The camera must follow John Smith. 
+- Camera should keep John Smith at it's center at all times.
 
 
 # 3. *As a user, I want to be able to fight enemies as John Smith, so that I make progress through the level.*
