@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Update() {
+        print(onWall());
 
         horizontalInput = Input.GetAxis("Horizontal");
 
