@@ -1,6 +1,8 @@
 # Requirements Specification for *John Smith*
 
-## Introduction:
+## Introduction
+
+### 1.1 Purpose of Product
 
 John Smith is a 2d platformer that tells the story about a man named John Smith who has found himself trapped in a video game. In this endeavor, he finds himself having to fight off enemies who are trying to keep him in the game world. Brussels Sprouts, the IRS, paperwork, are a few mentionable enemies that he encounters. This requirements specification is will describe what John Smith will do and how it will perform. We, here at Not A Team, hope that you find it helpful. 
 
@@ -20,14 +22,10 @@ C#: a programming language.
 
 
 ## General Description of Product 
-
-We have never made a video game before, so it is hard to promise things that we are not sure we can keep. But we do like hypotheticals. 
-
-*John Smith* will have many playable levels. These levels are the jungle, an office building, the desert, and whatever else wacky level we can think of. The main one that we will focus on is the office building. These levels will be full of obstacles, traps, and enemies that John Smith (you) will have to navigate (or slash) through. As John Smith, you will be able to stomp on enenmies, who will be programmed to kill John Smith/hinder him on his journey through the level.
   
 ### 2.1 Context of Product 
 
-We will build the game using the Unity platform. We will use Audacity to record the voice of John Smith. We will use Adobe to create artwork for the game, including sprites and user interfaces.  
+We will build the game using the Unity platform. We will use Audacity to record the voice of John Smith. We will use Adobe to create artwork for the game, including sprites and user interfaces. However, Unity will be the glue that puts all these things together.
 
 
 ### 2.2 Domain Model with Description 
@@ -37,11 +35,18 @@ Our domain model will start with our ideas and then learn and implement the synt
 Once our bugs have been fixed and our software is fully operational, we will be finished. 
 
 
+### 2.3 Product Functions
+
+We have never made a video game before, so it is hard to promise things that we are not sure we can keep. But we do like hypotheticals. 
+
+*John Smith* will have many playable levels. These levels are the jungle, an office building, the desert, and whatever else wacky level we can think of. The main one that we will focus on is the office building. These levels will be full of obstacles, traps, and enemies that John Smith (you) will have to navigate (or slash) through. As John Smith, you will be able to stomp on enenmies, who will be programmed to kill John Smith/hinder him on his journey through the level.
+
+
 ### 2.4 User Characteristics and Expectations 
 
-Our users are anyone who can use the arrow keys, but really, anyone who is interested in 2D platformers. 
+Our users are anyone who can use the arrow keys, but really, anyone who is interested in our game.
 
- 
+
 ### 2.5 Constraints 
 
 I feel the constraints will mostly be limited to the operating system we chose.  As well as the computer architectures we choose and the minimum requirements we will require to build and play this software game. 
