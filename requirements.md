@@ -1,5 +1,10 @@
 # Requirements Specification for *John Smith*
 
+## Introduction:
+
+John Smith is a 2d platformer that tells the story about a man named John Smith who has found himself trapped in a video game. In this endeavor, he finds himself having to fight off enemies who are trying to keep him in the game world. Brussels Sprouts, the IRS, paperwork, are a few mentionable enemies that he encounters. This requirements specification is will describe what John Smith will do and how it will perform. We, here at Not A Team, hope that you find it helpful. 
+
+
 ### 1.2 Scope of Product
 
 In *John Smith*, you will play as John Smith. This includes being able to jump, run, wall jump, and use weapons. These abilities are needed to be able to get through the levels, which include enemies, obstacles, and traps. The player will be able to see their lives, collectables, weapon status, and other information necessary on the screen. 
@@ -18,8 +23,7 @@ C#: a programming language.
 
 We have never made a video game before, so it is hard to promise things that we are not sure we can keep. But we do like hypotheticals. 
 
-*John Smith* will have many playable levels. These levels are the jungle, an office building, the desert, and whatever else wacky level we can think of. The main one that we will focus on is the office building. These levels will be full of obstacles, traps, and enemies that John Smith (you) will have to navigate (or slash) through.  
-
+*John Smith* will have many playable levels. These levels are the jungle, an office building, the desert, and whatever else wacky level we can think of. The main one that we will focus on is the office building. These levels will be full of obstacles, traps, and enemies that John Smith (you) will have to navigate (or slash) through. As John Smith, you will be able to stomp on enenmies, who will be programmed to kill John Smith/hinder him on his journey through the level.
   
 ### 2.1 Context of Product 
 
