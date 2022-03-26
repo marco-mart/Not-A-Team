@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using UnityEngine;
 
-public class BrusselSprout : MonoBehaviour
+public class BrusselsSprout : MonoBehaviour
 {
     [SerializeField] private float Speed;
     private Rigidbody2D body;
