@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class JohnSmithMovement : MonoBehaviour
 {
     [SerializeField] private float Speed;
     [SerializeField] private float jumpPower;
