@@ -50,7 +50,7 @@ none
 # 4. *As a user, I want to be able to jump over obstacles and traps, so that I make progress through the level.*
 
 ### Elaboration:
-The user should be able to jump over obstacles and traps, occasionally getting caught in one and dying, so that the game isn't easy, and therfore more entertaining for the user. To do this we will need to create trap/obstacle objects and depending on the trap/obstacle, a script.
+The user should be able to jump over obstacles and traps, occasionally getting caught in one and dying, so that the game isn't easy, and therefore more entertaining for the user. To do this we will need to create trap/obstacle objects and depending on the trap/obstacle, a script.
 
 ### Constraints
 none
@@ -60,7 +60,7 @@ none
 
 ### Acceptance Test
 - The obstacle/trap should deal some damage/kill John Smith when caught in it.
-- John Smith should only be dealth damage/death when inside the trap.
+- John Smith should only be dealt damage/death when inside the trap.
 
 
 # 5. "As a user, I want a starting menu, so that I can get a nice first impression of the game."
@@ -82,7 +82,7 @@ none
 # 6. "As a user, I want a pause menu, so that I can take breaks from playing the game, and changing the audio settings to fit my needs."
 
 ### Elaboration:
-A user cannot play a game for long periods of time without needing to take some breaks. Also, life is unpredictable, so its more likely that the user will need to pause the game than not. Also, the suer should have the option to restart the game if the user is compelled to do so.
+A user cannot play a game for long periods of time without needing to take some breaks. Also, life is unpredictable, so its more likely that the user will need to pause the game than not. Also, the user should have the option to restart the game, if the user is compelled to do so.
 
 ### Constraints:
 none
