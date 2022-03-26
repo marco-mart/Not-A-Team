@@ -32,6 +32,7 @@ We will build the game using the Unity platform. We will use Audacity to record 
 
 Domain Model: [Domain Model](https://lucid.app/lucidchart/53338507-5702-4e19-8915-22896976f550/edit?invitationId=inv_39b53736-0cd3-42d9-93ea-dcac855c3000)
 
+This is our domain model for now. We still need to implement a weapons system, and the code needed for the other enemies.
 Our domain model will start with our ideas and then learn and implement the syntax.  Next, we will then put the program together, then start testing our game for any bugs. 
 
 Once our bugs have been fixed and our software is fully operational, we will be finished. 
@@ -75,23 +76,22 @@ Non-functional requirements for our software will be its reliability, security, 
 
 ### 4.1 External Interface Requirements (User,Hardware,Software,Communications) 
 
-The user should have a Microsoft Windows 10 operating system. Most hardware should be able to run our program. 
+The user should have a Microsoft Windows 10 operating system. Most hardware should be able to run our program.
+John Smith has a menu interface that the user can use to change the volume settings, and start/pause the game. 
 
 
 ### 4.2 Performance Requirements 
 
 Our product's performance needs will be low pertaining to hardware and operating systems. However, the game's interface will be more specific about the performance requirements needed. 
 
+We will get these requirements after doing some testing on the completed product.
+
 
 ### 4.3 Design Constraints 
 
-Our design constraints will be using one type of IDE and Unity to make our game.  Another constraint is that we will be developing our game 
-
-and a windows OS machine. In the beginning stages, we are following a tutorial on YouTube to get our footing and learn how to incorporate all the different assets. 
+Our design constraints will be using one type of IDE and Unity to make our game.  Another constraint is that we will be developing our game and a windows OS machine. In the beginning stages, we are following a tutorial on YouTube to get our footing and learn how to incorporate all the different assets. 
 
   
 ### 4.4 Quality Requirements 
 
-Our quality requirements will be functional suitability, completeness, and appropriateness.  Reliability and performance efficiency are also  
-
-our quality requirements.
+Our quality requirements will be functional suitability, completeness, and appropriateness.  Reliability and performance efficiency are also our quality requirements.
