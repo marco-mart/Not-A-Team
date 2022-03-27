@@ -10,12 +10,12 @@ public class BrusselsSprout : MonoBehaviour
     private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
-    int state;
-    float turnCooldown;
+    private int state;
+    private float turnCooldown;
 
 
     // Awake is called before the first frame update
-    public void Awake()
+    private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -25,7 +25,7 @@ public class BrusselsSprout : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         print(state);
 
