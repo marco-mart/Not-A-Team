@@ -1,35 +1,113 @@
+# 1. *As a user, I want to be able to see and move around as John Smith, so that I can play the game as John Smith.*
 
-Functional Requirements: User Stories
+### Elaboration: 
+The user should have the ability to move around as John Smith in the game. Unity has a default pill-shaped (or you can choose a shape of your own) object that we can use until we get the animation/sprite for John Smith up and running. We can then use C# to write a script for the object that will take keyboard input that will control the pill's movements. 
 
-You will capture the functional requirements of your system in user stories, a popular agile method for documenting and writing down system functionality. Each user story must have a number and title and then have its main story statement in the form of:
+### Constraints: 
+none
 
-As a role I/we want to capability so that goal.
+### Effort Estimation:
+10 person-hours
 
-It also must have an elaboration and constraint description, and it must have an effort estimation using person-hours. The story ID number must be a dotted hierarchical number indicating which larger stories are its parents (if any). It also must have an acceptance test description, which should be a short description of how you will validate that this story was successfully implemented.
+### Acceptance Test: 
+- Be able to move left and right as John Smith
+- Be able to jump as John Smith
+- Sprites/Animations are in sync with what is happening (ie. turns left when switching running direction from right and vice-versa, jump action is synced with jump animation, etc...).
 
-NOTE: these are user stories, not developer stories! You (as a developer) are not a user!
 
-An example (for some business team management app):
-3.6: Export to CSV
+# 2. *As a user, I want the camera to follow John Smith, so that I can further explore the level.*
 
-As a manager, I want to export my team's timesheet data to a CSV file so that I can use it in a spreadsheet or write a script to do my own processing.
+### Elaboration:
+The user, playing as John Smith, should be able to see John Smith on screen at all times. Unity has various pre-made camera components that we can choose from to make this happen.
 
-Elaboration: Users should have the ability to use their data for purposes outside our system, and so we need to support a data export capability; since the CSV (comma-separated-values) file format is fairly common, we will use it as our export format.
+### Constraints:
+none
 
-Constraints: none
+### Effort Estimation:
+1 person-hour
 
-Effort Estimation: 2 person-hours
+## Acceptance Test:
+- The camera must follow John Smith. 
+- Camera should keep John Smith at it's center at all times.
 
-Acceptance Test: Perform export operation in user interface on demo data and import the resulting CSV file into OpenOffice Calc and Microsoft Excel. Show that both apps import the CSV properly. Perform export on a set of demo data, on data containing 1 element, and on an empty data set.
 
-[end example]
+# 3. *As a user, I want to be able to fight enemies as John Smith, so that I make progress through the level.*
 
-The number of the above story, 3.6, indicating it is user story 6 within top-level story 3. What is story 3? Perhaps it's is:
-3: Integrate with other tools
+### Elaboration:
+The user should be able to fight and kill enemies in the level so that the game has objectives and is not boring to the player. We will need do the same process we did in the creation for John Smith, but this time for various enemies. The enemies will have their own scripts and animations so we will need to get those synced up as well. 
 
-As a manager, I want to integrate this system with other tools I use so that my overall workflow is seamless.
+### Constraints:
+none
 
-[rest of story parts would be here]
+### Effort Estimation:
+10 person-hours
 
-As you can see, higher level user stories can be very abstract and not much help in figuring out your system, but they can then be broken down into pieces that finally tell you what you need to do!
+### Acceptance Test:
+- The enemies should attack/follow John Smith.
+- The enemies actions (moving left/right etc...) should be synced up with their animation/sprite.
+
+
+# 4. *As a user, I want to be able to jump over obstacles and traps, so that I make progress through the level.*
+
+### Elaboration:
+The user should be able to jump over obstacles and traps, occasionally getting caught in one and dying, so that the game isn't easy, and therefore more entertaining for the user. To do this we will need to create trap/obstacle objects and depending on the trap/obstacle, a script.
+
+### Constraints
+none
+
+### Effort Estimation
+10 person-hours
+
+### Acceptance Test
+- The obstacle/trap should deal some damage/kill John Smith when caught in it.
+- John Smith should only be dealt damage/death when inside the trap.
+
+
+# 5. "As a user, I want a starting menu, so that I can get a nice first impression of the game."
+
+### Elaboration:
+The first thing the user should see is a starting menu. The starting menu is very important to the aesthetic that we are trying to achieve with the game. The first impression the game leaves on the user should be memorable. Also, the start menu should have various options such as: start game, sound, options, etc...
+
+### Constraints:
+none
+
+### Effort Estimation
+3 person-hours
+
+### Acceptance Test
+- The start must be visually pleasing, and fit the game well. (i.e. the game is about a white collar man, so make it fit that style.)
+- Pressing the start button should start the game and bring the user into the game.
+
+
+# 6. "As a user, I want a pause menu, so that I can take breaks from playing the game, and changing the audio settings to fit my needs."
+
+### Elaboration:
+A user cannot play a game for long periods of time without needing to take some breaks. Also, life is unpredictable, so its more likely that the user will need to pause the game than not. Also, the user should have the option to restart the game, if the user is compelled to do so.
+
+### Constraints:
+none
+
+### Effort Estimation
+3 person-hours
+
+### Acceptance Test
+- The menu should freeze everything on screen.
+- The feaures that the menu offers, when toggled should cause the desired effect. (i.e. when sound is turned off/on, or restarting the level.
+
+
+# 7. "As a user, I want to hear a funny voice come from John Smith when doing some action, so that I can laugh (or be annoyed) when playing the game."
+
+### Elaboration:
+Hopefully the latter. This idea was introduced at the conception of the game. In getting this feature added, the level of entertainment that the game will have for the user will be increased.
+
+### Constraints:
+- Do not be cringe
+- Do not be annoying
+
+### Effort Estimation
+3 person-hours
+
+### Acceptance Test
+- The voice/phrases should elcicit some form of laughter during testing. 
+- The voice/phrase must come at opportune moments. (ex. When stomping on a brussels sprout)
 
