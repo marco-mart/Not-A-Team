@@ -111,7 +111,7 @@ Hopefully the latter. This idea was introduced at the conception of the game. In
 - The voice/phrases should elcicit some form of laughter during testing. 
 - The voice/phrase must come at opportune moments. (ex. When stomping on a brussels sprout)
 
-# 8. "As a user, I want to use weapons to attack enemies to make progress trough the level"
+# 8. "As a user, I want to use weapons to attack enemies to make progress through the level"
 
 ### Elaboration:
 Weapons would be a secondary way for the player to damage enemies, but from a range, to be able to clear a path to the exit.
@@ -126,7 +126,7 @@ Weapons would be a secondary way for the player to damage enemies, but from a ra
 ### Acceptance Test
 - The weapon must be visually and mechanically cohesive to the rest of the game
 
-# 9. "As a user, I want to be able to restart the level at any given point in case i mess up."
+# 9. "As a user, I want to be able to restart the level at any given point in case I mess up."
 
 ### Elaboration:
 With a single press of a button, or perhaps a clickable icon on the pause menu, the level should refresh and restart on command.
@@ -140,7 +140,7 @@ With a single press of a button, or perhaps a clickable icon on the pause menu, 
 ### Acceptance Test
 - The player's status should revert to what it was before the level started.
 
-# 10. "As a user, I want to be able to quit and stop playing when i get frustrated."
+# 10. "As a user, I want to be able to quit and stop playing when I get frustrated."
 
 ### Elaboration:
 With a single press of a button, or perhaps a clickable icon on the pause menu, the level should end and you should be taken back to the main menu on command.
