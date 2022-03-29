@@ -30,7 +30,7 @@ We will build the game using the Unity platform. We will use Audacity to record 
 
 ### 2.2 Domain Model with Description 
 
-Domain Model: [Domain Model](https://lucid.app/lucidchart/53338507-5702-4e19-8915-22896976f550/edit?invitationId=inv_39b53736-0cd3-42d9-93ea-dcac855c3000)
+Domain Model: [Domain Model](DomainModel.png)
 
 This is our domain model for now. We still need to implement a weapons system, and the code needed for the other enemies.
 Our domain model will start with our ideas and then learn and implement the syntax.  Next, we will then put the program together, then start testing our game for any bugs. 
