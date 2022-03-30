@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 4276808}
   - component: {fileID: 4276807}
   - component: {fileID: 4276806}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Ground
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 829747116}
   - component: {fileID: 829747115}
   - component: {fileID: 829747114}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Wall
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -624,7 +624,7 @@ GameObject:
   - component: {fileID: 1529026222}
   - component: {fileID: 1529026221}
   - component: {fileID: 1529026220}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Other wall
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -1042,10 +1042,10 @@ MonoBehaviour:
   jumpPower: 8
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 256
   wallLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
 --- !u!95 &1994067069
 Animator:
   serializedVersion: 3
