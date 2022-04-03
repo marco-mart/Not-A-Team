@@ -27,14 +27,11 @@ public class BrusselsSprout : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        print(state);
-
         anim.SetBool("right", state == 1);
         anim.SetBool("left", state == -1);
 
         body.velocity = new Vector2(Speed * state, body.velocity.y);
 
-        print("BS" + onWall());
         if (onWall() && turnCooldown > 0.2f)
         {
             state = -state;

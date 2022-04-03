@@ -22,16 +22,15 @@ public class JohnSmith : MonoBehaviour
     }
 
     private void Update() {
-        print(onWall());
 
         horizontalInput = Input.GetAxis("Horizontal");
 
         // flip John Smith left or right depending on
         // which direction he is going
         if (horizontalInput > 0) 
-            transform.localScale = new Vector2(3, 3);
+            transform.localScale = new Vector2(0.5f, 0.5f);
         else if (horizontalInput < 0)
-            transform.localScale = new Vector2(-3, 3);
+            transform.localScale = new Vector2(-0.5f, 0.5f);
 
         //set animator parameters
         anim.SetBool("run", horizontalInput != 0);
