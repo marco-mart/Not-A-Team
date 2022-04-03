@@ -12,6 +12,8 @@ public class BrusselsSprout : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     private int state;
     private float turnCooldown;
+    private float damageCooldown;
+    [SerializeField] private float damage; 
 
 
     // Awake is called before the first frame update
@@ -27,14 +29,12 @@ public class BrusselsSprout : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        print(state);
 
         anim.SetBool("right", state == 1);
         anim.SetBool("left", state == -1);
 
         body.velocity = new Vector2(Speed * state, body.velocity.y);
 
-        print("BS" + onWall());
         if (onWall() && turnCooldown > 0.2f)
         {
             state = -state;
@@ -42,6 +42,18 @@ public class BrusselsSprout : MonoBehaviour
         }
 
         turnCooldown += Time.deltaTime;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) 
+    {
+        if (collision.tag == "Player" && damageCooldown > 0)
+        {
+            Debug.Log("Hit detected.");
+            damageCooldown = 0;
+            collision.GetComponent<Health>().TakeDamage(damage);
+        }
+
+        damageCooldown += Time.deltaTime;
     }
 
     private bool onWall()
