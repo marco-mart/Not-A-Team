@@ -40,12 +40,8 @@ public class Health : MonoBehaviour
         return currentHealth;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E)) 
-        {
-            TakeDamage(1);
-        }
+    public void addHealth(float value) {
+        currentHealth = Mathf.Clamp(currentHealth + value, 0, startingHealth);
     }
+
 }

@@ -12,8 +12,8 @@ public class BrusselsSprout : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     private int state;
     private float turnCooldown;
-    private float damageCooldown;
     [SerializeField] private float damage; 
+    private float damageCooldown;
 
 
     // Awake is called before the first frame update
@@ -22,6 +22,7 @@ public class BrusselsSprout : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        damageCooldown = 0;
 
         state = 1; //1 = right, -1 = left, brussel sprout always starts to the right
     }
@@ -46,9 +47,9 @@ public class BrusselsSprout : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
-        if (collision.tag == "Player" && damageCooldown > 0)
+        Debug.Log("Hit detected.");
+        if (collision.tag == "Player" && damageCooldown > 0.05f)
         {
-            Debug.Log("Hit detected.");
             damageCooldown = 0;
             collision.GetComponent<Health>().TakeDamage(damage);
         }
