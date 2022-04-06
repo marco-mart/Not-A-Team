@@ -52,6 +52,7 @@ public class JohnSmith : MonoBehaviour
             //can only jump if grounded, can jump with space or up arrow
             if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow))) {
                 jump();
+                // FinalCollisionCheck();
             }
         }
         else {
@@ -59,6 +60,28 @@ public class JohnSmith : MonoBehaviour
         }
         
     } //end Update
+
+    // private void FinalCollisionCheck()
+    // {
+    //     // Get the velocity
+    //     Vector2 moveDirection = new Vector2(body.velocity.x * Time.fixedDeltaTime, 0.2f);
+         
+    //     // Get bounds of Collider
+    //     var bottomRight = new Vector2(playerCollider.bounds.max.x, player.collider.bounds.max.y);
+    //     var topLeft = new Vector2(playerCollider.bounds.min.x, player.collider.bounds.min.y);
+     
+    //     // Move collider in direction that we are moving
+    //     bottomRight += moveDirection;
+    //     topLeft += moveDirection;
+                 
+    //     // Check if the body's current velocity will result in a collision
+    //     if (Physics2D.OverlapArea(topLeft, bottomRight, EnvironmentLayer))
+    //     {
+    //         // If so, stop the movement
+    //         body.velocity = new Vector3(0, rigidBody.velocity.y, 0);
+    //     }
+    // }
+
 
     private void jump()
     {
