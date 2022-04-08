@@ -9,6 +9,6 @@ Working on: "John Smith", a 2-d platformer game.
 
 # How to run John Smith (Windows)
 1. Go to Repo
-2. >> TheGame >> Builds >> Windows >> Installer
+2. Path: TheGame >> Builds >> Windows >> Installer
 3. Run "John Smith Setup (x86_64).exe
 
