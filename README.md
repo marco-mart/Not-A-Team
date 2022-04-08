@@ -5,3 +5,10 @@ Working on: "John Smith", a 2-d platformer game.
 
 ## Check out our project's site: 
 [https://marco-mart.github.io/Not-A-Team/](https://marco-mart.github.io/Not-A-Team/)
+
+
+# How to run John Smith (Windows)
+1. Go to Repo
+2. >> TheGame >> Builds >> Windows >> Installer
+3. Run "John Smith Setup (x86_64).exe
+
