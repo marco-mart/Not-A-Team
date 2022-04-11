@@ -4,4 +4,5 @@ We chose the Repository Architecture style because our game revolves around a ce
 
 This was a necessity as Unity documentation says that the Update() function (which any object with a script has) is called once per frame, so the data store is accessed/modified quite a bit. 
 
-Diagram: [Repository Architecture Style](repository.png)
+Diagram: 
+![Repository Architecture Style](repository.png)
