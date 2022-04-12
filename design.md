@@ -23,3 +23,7 @@ This class is the only enemy in the game for now. The Brussel Sprout is the only
 
 ### Pause Menu
 This class allows the user to quit/pause the game anytime during gameplay. 
+
+### Additional Information
+- The game engine we use is Unity with C# as the scripting language. 
+- Our game runs on a single thread (Unity's Event API).
