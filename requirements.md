@@ -50,14 +50,9 @@ We have never made a video game before, so it is hard to promise things that we 
 Our users are anyone who can use the arrow keys, but really, anyone who is interested in our game.
 
 
-### 2.5 Constraints 
+### 2.5 Assumptions and Dependencies 
 
-I feel the constraints will mostly be limited to the operating system we chose.  As well as the computer architectures we choose and the minimum requirements we will require to build and play this software game. 
-
-
-### 2.6 Assumptions and Dependencies 
-
-Our systems depend on Unity. The system should be able to run Unity. 
+Our game is designed only for Windows OS. 
 
 
 ## Functional Requirements 
@@ -82,16 +77,16 @@ John Smith has a menu interface that the user can use to change the volume setti
 
 ### 4.2 Performance Requirements 
 
-Our product's performance needs will be low pertaining to hardware and operating systems. However, the game's interface will be more specific about the performance requirements needed. 
-
-We will get these requirements after doing some testing on the completed product.
+Our product's performance should be pretty good on either a 32-bit or 64-bit Windows machine. There shouldn't be too much of a difference, considering the size of our game. Our product's performance needs will be low pertaining to hardware and operating systems.
 
 
 ### 4.3 Design Constraints 
 
-Our design constraints will be using one type of IDE and Unity to make our game.  Another constraint is that we will be developing our game and a windows OS machine. In the beginning stages, we are following a tutorial on YouTube to get our footing and learn how to incorporate all the different assets. 
+Our biggest design constraints are that we are using Unity as the game engine, and Windows as our target OS, so we are limited to whatver these platforms provide. (Which is quite a bit.) However, considering our project's purpose/scope, these constraints are pretty much trivial. 
+
+Regarding our architecture choice, the constraints on pur system is that all of the data must be of the same format. (Which again, for our system, is trivial and this constraint has not been a hinderance on creativity or system design at all.)
 
   
 ### 4.4 Quality Requirements 
 
-Our quality requirements will be functional suitability, completeness, and appropriateness.  Reliability and performance efficiency are also our quality requirements.
+Our quality requirements will be functional suitability, completeness, and appropriateness. Reliability and performance efficiency are also our quality requirements.
