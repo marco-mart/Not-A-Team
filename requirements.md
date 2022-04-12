@@ -47,7 +47,7 @@ We have never made a video game before, so it is hard to promise things that we 
 
 ### 2.4 User Characteristics and Expectations 
 
-Our users are anyone who can use the arrow keys, but really, anyone who is interested in our game.
+Our users are anyone who wants to have a laugh or are just plainly interested in what *John Smith* entails.
 
 
 ### 2.5 Assumptions and Dependencies 
