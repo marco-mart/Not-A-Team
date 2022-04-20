@@ -19,6 +19,8 @@ public class JohnSmith : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+
+        Time.timeScale = 1f; //makes sure the game is running when it starts
     }
 
     private void Update() {

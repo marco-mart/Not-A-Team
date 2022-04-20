@@ -4,8 +4,10 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-    public GameObject pauseMenuUI;
+    public GameObject PauseMenuUI;
     public string Menu;
+    public string Level;
+    
 
     // Update is called once per frame
     void Update()
@@ -25,14 +27,14 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        pauseMenuUI.SetActive(false);
+        PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     } //end Resume
 
     void Pause()
     {
-        pauseMenuUI.SetActive(true);
+        PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
 
@@ -42,6 +44,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(Menu);
+        GameIsPaused = false;
     }
 
     public void QuitGame()
@@ -49,4 +52,10 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Quitting Game...");
         Application.Quit();
     }
+
+    public void Restart() {
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        SceneManager.LoadScene(Level);
+    } //end restart
 } //end class
