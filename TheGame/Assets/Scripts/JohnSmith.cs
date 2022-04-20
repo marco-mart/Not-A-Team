@@ -25,6 +25,7 @@ public class JohnSmith : MonoBehaviour
     }
 
     private void Update() {
+        print("in Update: " + transform.localScale);
 
         horizontalInput = Input.GetAxis("Horizontal");
 
@@ -32,12 +33,13 @@ public class JohnSmith : MonoBehaviour
         // which direction he is going
         if (horizontalInput > 0 && !facingRight) {
             print("Right");
-            flip();
+            transform.localScale = flip();
         }
             
         else if (horizontalInput < 0 && facingRight) {
             print("Left");
-            flip();
+            transform.localScale = flip();
+            print("after flip(): " + transform.localScale);
         }
             
 
@@ -66,9 +68,11 @@ public class JohnSmith : MonoBehaviour
         }
         else {
             wallJumpCoolDown += Time.deltaTime;
-        }
+        } //end else
         
     } //end Update
+
+
 
     // private void FinalCollisionCheck()
     // {
@@ -134,11 +138,12 @@ public class JohnSmith : MonoBehaviour
         return raycast.collider != null;
     }
 
-    private void flip() {
+    private Vector2 flip() {
         Vector2 currentScale = transform.localScale;
         currentScale.x *= -1;
-        transform.localScale = currentScale;
+        
 
         facingRight = !facingRight;
+        return currentScale;
     }
 }
