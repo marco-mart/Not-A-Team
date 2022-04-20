@@ -11,6 +11,7 @@ public class JohnSmith : MonoBehaviour
     private BoxCollider2D boxCollider;
     private float wallJumpCoolDown;
     private float horizontalInput;
+    bool facingRight = true;
     
 
     private void Awake()
@@ -29,10 +30,16 @@ public class JohnSmith : MonoBehaviour
 
         // flip John Smith left or right depending on
         // which direction he is going
-        if (horizontalInput > 0) 
-            transform.localScale = new Vector2(0.5f, 0.5f);
-        else if (horizontalInput < 0)
-            transform.localScale = new Vector2(-0.5f, 0.5f);
+        if (horizontalInput > 0 && !facingRight) {
+            print("Right");
+            flip();
+        }
+            
+        else if (horizontalInput < 0 && facingRight) {
+            print("Left");
+            flip();
+        }
+            
 
         //set animator parameters
         anim.SetBool("run", horizontalInput != 0);
@@ -125,5 +132,13 @@ public class JohnSmith : MonoBehaviour
     {
         RaycastHit2D raycast = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);
         return raycast.collider != null;
+    }
+
+    private void flip() {
+        Vector2 currentScale = transform.localScale;
+        currentScale.x *= -1;
+        transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 }
