@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour {
     private static float health;
@@ -8,6 +9,7 @@ public class GameOver : MonoBehaviour {
     public string Level;
     public GameObject JohnSmith;
     private float menuCooldown;
+    public GameObject image;
 
     // Update is called once per frame
     void Update() {
@@ -16,7 +18,9 @@ public class GameOver : MonoBehaviour {
         health = JohnSmith.GetComponent<Health>().getCurrentHealth();
 
         if (health == 0f) {
-            if (menuCooldown >= 0.5f) {
+            image.GetComponent<Animator>().SetBool("in", menuCooldown > 0.5f && menuCooldown < 1.5f);
+            image.GetComponent<Animator>().SetBool("out", menuCooldown > 2.5f && menuCooldown < 3.5f);
+            if (menuCooldown > 3.5f) {
                 Die();
             } //end if
             menuCooldown += Time.deltaTime;
