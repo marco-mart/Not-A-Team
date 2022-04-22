@@ -47,8 +47,8 @@ public class BrusselsSprout : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
-        Debug.Log("Hit detected.");
-        if (collision.tag == "Player" && damageCooldown > 0.05f)
+        //Debug.Log("Hit detected.");
+        if (collision.tag == "Player" && damageCooldown > 0.1f)
         {
             damageCooldown = 0;
             collision.GetComponent<Health>().TakeDamage(damage);
