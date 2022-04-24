@@ -5,12 +5,21 @@ public class Health : MonoBehaviour
     [SerializeField]private float startingHealth;
     private float currentHealth;
     private Animator anim;
-    private bool dead;
+    private bool dead = false;
+    private float wait;
 
     private void Awake()
     {
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
+        wait = 0;
+    }
+
+    private void Update() {
+        if (dead) {
+            // start timer
+            wait += Time.deltaTime;
+        }
     }
 
     public void TakeDamage(float damage) 
@@ -18,9 +27,12 @@ public class Health : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
         
+        print(gameObject.name + "\nCurrent health = " + currentHealth);
+
+
         if (currentHealth > 0)
         {
-            // hurt John
+            // hurt animation
             anim.SetTrigger("hurt");
         }
 
@@ -28,14 +40,23 @@ public class Health : MonoBehaviour
         {
             if (!dead) 
             {
+                // die animation
                 anim.SetTrigger("die");
-                GetComponent<JohnSmith>().enabled = false;
+                if (gameObject.tag == "Player") {
+                    GetComponent<JohnSmith>().enabled = false;
+                }
+                else if (gameObject.tag == "Enemy") {
+
+                    // wait like 3 secs
+                    Destroy(gameObject);
+                }
+
                 dead = true;
             }
         }
     }
 
-    // get John's current health
+    // get object's current health
     public float getCurrentHealth() {
         return currentHealth;
     }

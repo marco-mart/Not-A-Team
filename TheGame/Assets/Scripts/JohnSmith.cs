@@ -11,6 +11,8 @@ public class JohnSmith : MonoBehaviour
     private BoxCollider2D boxCollider;
     private float wallJumpCoolDown;
     private float horizontalInput;
+    bool facingRight = true;
+    private GameObject shootingPoint;
     
 
     private void Awake()
@@ -20,6 +22,9 @@ public class JohnSmith : MonoBehaviour
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
 
+        // get Stapler's shooting point
+        shootingPoint = GameObject.Find("ShootingPoint");
+
         Time.timeScale = 1f; //makes sure the game is running when it starts
     }
 
@@ -27,12 +32,16 @@ public class JohnSmith : MonoBehaviour
 
         horizontalInput = Input.GetAxis("Horizontal");
 
-        // flip John Smith left or right depending on
+        // Flip John Smith left or right depending on
         // which direction he is going
-        if (horizontalInput > 0) 
-            transform.localScale = new Vector2(0.5f, 0.5f);
-        else if (horizontalInput < 0)
-            transform.localScale = new Vector2(-0.5f, 0.5f);
+        if (horizontalInput > 0 && !facingRight) {
+            Flip(shootingPoint);
+        }
+            
+        else if (horizontalInput < 0 && facingRight) {
+            Flip(shootingPoint);
+        }
+            
 
         //set animator parameters
         anim.SetBool("run", horizontalInput != 0);
@@ -96,7 +105,7 @@ public class JohnSmith : MonoBehaviour
             if (horizontalInput == 0) {
                 // push John Smith to other direction
                 body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 10, 0);
-                // flip John Smith to correct direction
+                // Flip John Smith to correct direction
                 if (transform.localScale.x > 0) {
                     transform.localScale = new Vector2(-Mathf.Sign(transform.localScale.x) * transform.localScale.x, transform.localScale.y);
                 }
@@ -125,5 +134,20 @@ public class JohnSmith : MonoBehaviour
     {
         RaycastHit2D raycast = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);
         return raycast.collider != null;
+    }
+
+    private void Flip(GameObject shootingPoint) {
+
+        Vector2 currentScale = transform.localScale;
+
+        // flip shooting point's direction
+        shootingPoint.transform.Rotate(0f, 180f, 0f);
+
+        // flip John Smith's direction
+        currentScale.x *= -1;
+
+        transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 }
