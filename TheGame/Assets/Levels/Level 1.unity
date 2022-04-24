@@ -562,6 +562,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &193019690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 193019691}
+  m_Layer: 0
+  m_Name: ShootingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &193019691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193019690}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.69, y: 1.44, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1994067067}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &209771801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,7 +1079,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398146527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.92, y: 10.99, z: -30}
+  m_LocalPosition: {x: 17.905, y: 10.998, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 21852920}
@@ -1313,8 +1343,9 @@ GameObject:
   - component: {fileID: 481618045}
   - component: {fileID: 481618044}
   - component: {fileID: 481618043}
+  - component: {fileID: 481618049}
   m_Layer: 0
-  m_Name: BrusselSprout (1)
+  m_Name: BrusselsSprout (1)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1497,6 +1528,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &481618049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481618041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564439b725fb11b17a26886b5b59852f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 3
 --- !u!1 &484504497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,7 +1786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.92, y: 10.99, z: -30}
+  m_LocalPosition: {x: 17.905, y: 10.998, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2885,8 +2929,9 @@ GameObject:
   - component: {fileID: 1216673837}
   - component: {fileID: 1216673836}
   - component: {fileID: 1216673835}
+  - component: {fileID: 1216673841}
   m_Layer: 0
-  m_Name: BrusselSprout (2)
+  m_Name: BrusselsSprout (2)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3069,6 +3114,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1216673841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216673833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564439b725fb11b17a26886b5b59852f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 3
 --- !u!1 &1249084475
 GameObject:
   m_ObjectHideFlags: 0
@@ -3955,8 +4013,9 @@ GameObject:
   - component: {fileID: 1435355065}
   - component: {fileID: 1435355064}
   - component: {fileID: 1435355063}
+  - component: {fileID: 1435355069}
   m_Layer: 0
-  m_Name: BrusselSprout (3)
+  m_Name: BrusselsSprout (3)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4139,6 +4198,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1435355069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435355061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564439b725fb11b17a26886b5b59852f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 3
 --- !u!1 &1478408204
 GameObject:
   m_ObjectHideFlags: 0
@@ -4396,7 +4468,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -794, y: 377}
+  m_AnchoredPosition: {x: -617, y: 481}
   m_SizeDelta: {x: 669.7371, y: 77.5216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1546101118
@@ -4953,8 +5025,9 @@ GameObject:
   - component: {fileID: 1632562154}
   - component: {fileID: 1632562155}
   - component: {fileID: 1632562160}
+  - component: {fileID: 1632562161}
   m_Layer: 0
-  m_Name: BrusselSprout
+  m_Name: BrusselsSprout
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5137,6 +5210,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.5847435, y: 4.91}
   m_EdgeRadius: 0
+--- !u!114 &1632562161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632562153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564439b725fb11b17a26886b5b59852f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 3
 --- !u!1 &1670161767
 GameObject:
   m_ObjectHideFlags: 0
@@ -5474,6 +5560,7 @@ GameObject:
   - component: {fileID: 1994067069}
   - component: {fileID: 1994067070}
   - component: {fileID: 1994067071}
+  - component: {fileID: 1994067072}
   m_Layer: 0
   m_Name: JohnSmith
   m_TagString: Player
@@ -5587,9 +5674,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994067063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.92, y: 10.99, z: -20}
+  m_LocalPosition: {x: 17.905, y: 10.998, z: -20}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_Children: []
+  m_Children:
+  - {fileID: 193019691}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5671,6 +5759,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.86218643, y: 4.9022546}
   m_EdgeRadius: 0
+--- !u!114 &1994067072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994067063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ce76e79edba1d4ca856521f9ace708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 193019691}
+  staple: {fileID: 7903025740029035803, guid: e1966660bffccd84ca9414cb7d2c8ea1, type: 3}
 --- !u!1 &2106990168
 GameObject:
   m_ObjectHideFlags: 0
@@ -5705,7 +5807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -794, y: 377}
+  m_AnchoredPosition: {x: -617, y: 480.99997}
   m_SizeDelta: {x: 669.7371, y: 77.5216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2106990170

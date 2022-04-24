@@ -12,7 +12,7 @@ public class BrusselsSprout : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     private int state;
     private float turnCooldown;
-    [SerializeField] private float damage; 
+    [SerializeField] private int damage; 
     private float damageCooldown;
 
 
@@ -36,7 +36,7 @@ public class BrusselsSprout : MonoBehaviour
 
         body.velocity = new Vector2(Speed * state, body.velocity.y);
 
-        if (onWall() && turnCooldown > 0.2f)
+        if (onWall() && turnCooldown > 0.3f)
         {
             state = -state;
             turnCooldown = 0;
@@ -47,7 +47,6 @@ public class BrusselsSprout : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
-        Debug.Log("Hit detected.");
         if (collision.tag == "Player" && damageCooldown > 0.05f)
         {
             damageCooldown = 0;
@@ -62,4 +61,10 @@ public class BrusselsSprout : MonoBehaviour
         RaycastHit2D raycast = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);
         return raycast.collider != null;
     }
+
+    public void TakeDamage(float d) {
+        GetComponent<Health>().TakeDamage(d);
+    }
+
+    
 }
