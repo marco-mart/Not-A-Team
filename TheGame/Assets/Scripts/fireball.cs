@@ -29,6 +29,10 @@ public class fireball : MonoBehaviour
             }
             else if (hitInfo.name.StartsWith("Book")) {
                 // book stuff
+                print("BOOK :D");
+                Book enemy = hitInfo.GetComponent<Book>();
+
+                enemy.TakeDamage(damage);
             }
         }
 

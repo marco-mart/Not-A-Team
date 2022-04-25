@@ -60,12 +60,16 @@ public class Book : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) 
     {
         //Debug.Log("Hit detected.");
-        if (collision.tag == "Player" && damageCooldown > 0.1f)
+        if (collision.tag == "Player" && damageCooldown > 0.05f)
         {
             damageCooldown = 0;
             collision.GetComponent<Health>().TakeDamage(damage);
         }
 
         damageCooldown += Time.deltaTime;
+    }
+
+    public void TakeDamage(float d) {
+        GetComponent<Health>().TakeDamage(d);
     }
 } //end class

@@ -61,7 +61,7 @@ public class JohnSmith : MonoBehaviour
             }
 
             //can only jump if grounded, can jump with space or up arrow
-            if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow))) {
+            if ((Input.GetKey(KeyCode.UpArrow))) {
                 jump();
                 // FinalCollisionCheck();
             }
