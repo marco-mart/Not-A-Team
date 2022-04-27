@@ -2,18 +2,18 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "John Smith"
-#define MyAppVersion ".2"
+#define MyAppVersion "0.4"
 #define MyAppPublisher "Not-A-Team"
 #define MyAppURL "https://marco-mart.github.io/Not-A-Team/"
 #define MyAppExeName "John Smith.exe"
-#define MyAppAssocName MyAppName + " File"
-#define MyAppAssocExt ".myp"
+#define MyAppAssocName MyAppName + ""
+#define MyAppAssocExt ".exe"
 #define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{8D2928DD-4D77-4B23-BA33-382DFD16B67C}
+AppId={{764CD205-62A8-423B-BD2D-95D53063E0FB}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -40,10 +40,10 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 Source: "C:\Users\Marco\Desktop\JohnSmithProject\Not-A-Team\TheGame\Builds\Windows\x86_64\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Marco\Desktop\JohnSmithProject\Not-A-Team\TheGame\Builds\Windows\x86_64\John Smith_data\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\Marco\Desktop\JohnSmithProject\Not-A-Team\TheGame\Builds\Windows\x86_64\MonoBleedingEdge\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\Users\Marco\Desktop\JohnSmithProject\Not-A-Team\TheGame\Builds\Windows\x86_64\UnityCrashHandler64.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\Marco\Desktop\JohnSmithProject\Not-A-Team\TheGame\Builds\Windows\x86_64\UnityPlayer.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Marco\Desktop\JohnSmithProject\Not-A-Team\TheGame\Builds\Windows\x86_64\John Smith_Data\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\Users\Marco\Desktop\JohnSmithProject\Not-A-Team\TheGame\Builds\Windows\x86_64\MonoBleedingEdge\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
