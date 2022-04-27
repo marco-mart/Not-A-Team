@@ -45,11 +45,12 @@ public class BrusselsSprout : MonoBehaviour
         }
 
         turnCooldown += Time.deltaTime;
+        damageCooldown += Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
-        if (collision.tag == "Player" && damageCooldown > 0.05f)
+        if (collision.tag == "Player" && damageCooldown > 3f)
         {
             damageCooldown = 0;
             collision.GetComponent<Health>().TakeDamage(damage);

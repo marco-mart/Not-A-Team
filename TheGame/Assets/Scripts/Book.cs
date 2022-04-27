@@ -47,23 +47,22 @@ public class Book : MonoBehaviour
                     transform.localScale = new Vector2(-0.15f, 0.15f);
                 else 
                     transform.localScale = new Vector2(0.15f, 0.15f);
-            } //end if
+            } // end if
             else {
                 anim.SetTrigger("flap");
                 body.velocity = new Vector2(speed,0);
                 transform.localScale = new Vector2(0.15f, 0.15f);
-            } //end else
+            } // end else
+            
         } //end if
 
-        //else the health script will dictate velocity
-
-
+        damageCooldown += Time.deltaTime;
     } //end Update
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
         //Debug.Log("Hit detected.");
-        if (collision.tag == "Player" && damageCooldown > 0.05f)
+        if (collision.tag == "Player" && damageCooldown > 3f)
         {
             damageCooldown = 0;
             collision.GetComponent<Health>().TakeDamage(damage);

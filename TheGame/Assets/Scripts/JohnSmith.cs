@@ -26,7 +26,7 @@ public class JohnSmith : MonoBehaviour
         shootingPoint = GameObject.Find("ShootingPoint");
 
         Time.timeScale = 1f; //makes sure the game is running when it starts
-    }
+    } // end Awake
 
     private void Update() {
 
@@ -48,10 +48,9 @@ public class JohnSmith : MonoBehaviour
         anim.SetBool("run", horizontalInput != 0);
         anim.SetBool("grounded", isGrounded());
 
-       //can only jump if grounded, can jump with space or up arrow
+        //can only jump if grounded, can jump with space or up arrow
         if ((Input.GetKey(KeyCode.UpArrow))) {
             jump();
-            // FinalCollisionCheck();
         }
 
         if (Input.GetKey(KeyCode.Space) && shootingCooldown > 0.5f) {
@@ -65,28 +64,7 @@ public class JohnSmith : MonoBehaviour
 
         print("Shoot Cool: " + shootingCooldown);
         
-    } //end Update
-
-    // private void FinalCollisionCheck()
-    // {
-    //     // Get the velocity
-    //     Vector2 moveDirection = new Vector2(body.velocity.x * Time.fixedDeltaTime, 0.2f);
-         
-    //     // Get bounds of Collider
-    //     var bottomRight = new Vector2(playerCollider.bounds.max.x, player.collider.bounds.max.y);
-    //     var topLeft = new Vector2(playerCollider.bounds.min.x, player.collider.bounds.min.y);
-     
-    //     // Move collider in direction that we are moving
-    //     bottomRight += moveDirection;
-    //     topLeft += moveDirection;
-                 
-    //     // Check if the body's current velocity will result in a collision
-    //     if (Physics2D.OverlapArea(topLeft, bottomRight, EnvironmentLayer))
-    //     {
-    //         // If so, stop the movement
-    //         body.velocity = new Vector3(0, rigidBody.velocity.y, 0);
-    //     }
-    // }
+    } // end Update
 
 
     private void jump()
@@ -95,41 +73,20 @@ public class JohnSmith : MonoBehaviour
             body.velocity = new Vector2(body.velocity.x, jumpPower);
             anim.SetTrigger("jump");
         }
-        // else if (onWall() && !isGrounded()) {
 
-        //     if (horizontalInput == 0) {
-        //         // push John Smith to other direction
-        //         body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 10, 0);
-        //         // Flip John Smith to correct direction
-        //         if (transform.localScale.x > 0) {
-        //             transform.localScale = new Vector2(-Mathf.Sign(transform.localScale.x) * transform.localScale.x, transform.localScale.y);
-        //         }
-        //         else {
-        //             transform.localScale = new Vector2(Mathf.Sign(transform.localScale.x) * transform.localScale.x, transform.localScale.y);
-        //         }
-        //     }
-        //     else {
-        //         // wall jump in opposite direction as wall 
-        //         // ex. left and up or right and up
-        //         body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 10, 10);
-        //     }
-
-        //     wallJumpCoolDown = 0;
-        // }
-
-    } //end jump
+    } // end jump
 
     private bool isGrounded()
     {
         RaycastHit2D raycast = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         return raycast.collider != null;
-    }
+    } // end isGrounded
 
     private bool onWall()
     {
         RaycastHit2D raycast = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);
         return raycast.collider != null;
-    }
+    } // end onWall
 
     private void Flip(GameObject shootingPoint) {
 
@@ -144,5 +101,7 @@ public class JohnSmith : MonoBehaviour
         transform.localScale = currentScale;
 
         facingRight = !facingRight;
-    }
-}
+
+    } // end Flip
+    
+} // end John Smith
