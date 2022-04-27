@@ -9,7 +9,7 @@ public class JohnSmith : MonoBehaviour
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxCollider;
-    private float wallJumpCoolDown;
+    private float shootingCooldown = 0;
     private float horizontalInput;
     bool facingRight = true;
     private GameObject shootingPoint;
@@ -31,6 +31,7 @@ public class JohnSmith : MonoBehaviour
     private void Update() {
 
         horizontalInput = Input.GetAxis("Horizontal");
+        body.velocity = new Vector2( horizontalInput * Speed, body.velocity.y);
 
         // Flip John Smith left or right depending on
         // which direction he is going
@@ -47,28 +48,22 @@ public class JohnSmith : MonoBehaviour
         anim.SetBool("run", horizontalInput != 0);
         anim.SetBool("grounded", isGrounded());
 
-        // wall jump logic
-        if (wallJumpCoolDown > 0.2f) {
-            
-            body.velocity = new Vector2( horizontalInput * Speed, body.velocity.y);
-
-            if (onWall() && !isGrounded()) {
-                body.gravityScale = 0;
-                body.velocity = Vector2.zero;
-            }
-            else {
-                body.gravityScale = 1;
-            }
-
-            //can only jump if grounded, can jump with space or up arrow
-            if ((Input.GetKey(KeyCode.UpArrow))) {
-                jump();
-                // FinalCollisionCheck();
-            }
+       //can only jump if grounded, can jump with space or up arrow
+        if ((Input.GetKey(KeyCode.UpArrow))) {
+            jump();
+            // FinalCollisionCheck();
         }
+
+        if (Input.GetKey(KeyCode.Space) && shootingCooldown > 0.5f) {
+            anim.SetTrigger("shoot");
+            shootingCooldown = 0;
+        } //end if
         else {
-            wallJumpCoolDown += Time.deltaTime;
-        }
+            anim.SetTrigger("dontShoot");
+            shootingCooldown += Time.deltaTime;
+        } //end else
+
+        print("Shoot Cool: " + shootingCooldown);
         
     } //end Update
 
@@ -100,27 +95,27 @@ public class JohnSmith : MonoBehaviour
             body.velocity = new Vector2(body.velocity.x, jumpPower);
             anim.SetTrigger("jump");
         }
-        else if (onWall() && !isGrounded()) {
+        // else if (onWall() && !isGrounded()) {
 
-            if (horizontalInput == 0) {
-                // push John Smith to other direction
-                body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 10, 0);
-                // Flip John Smith to correct direction
-                if (transform.localScale.x > 0) {
-                    transform.localScale = new Vector2(-Mathf.Sign(transform.localScale.x) * transform.localScale.x, transform.localScale.y);
-                }
-                else {
-                    transform.localScale = new Vector2(Mathf.Sign(transform.localScale.x) * transform.localScale.x, transform.localScale.y);
-                }
-            }
-            else {
-                // wall jump in opposite direction as wall 
-                // ex. left and up or right and up
-                body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 10, 10);
-            }
+        //     if (horizontalInput == 0) {
+        //         // push John Smith to other direction
+        //         body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 10, 0);
+        //         // Flip John Smith to correct direction
+        //         if (transform.localScale.x > 0) {
+        //             transform.localScale = new Vector2(-Mathf.Sign(transform.localScale.x) * transform.localScale.x, transform.localScale.y);
+        //         }
+        //         else {
+        //             transform.localScale = new Vector2(Mathf.Sign(transform.localScale.x) * transform.localScale.x, transform.localScale.y);
+        //         }
+        //     }
+        //     else {
+        //         // wall jump in opposite direction as wall 
+        //         // ex. left and up or right and up
+        //         body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 10, 10);
+        //     }
 
-            wallJumpCoolDown = 0;
-        }
+        //     wallJumpCoolDown = 0;
+        // }
 
     } //end jump
 

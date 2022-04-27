@@ -36,23 +36,26 @@ public class Book : MonoBehaviour
 
         print(playerDetected);
 
-        if (playerDetected) {
-            //body.velocity = new Vector2(speed,0);
+        if (GetComponent<Health>().getCurrentHealth() > 0) {
+            if (playerDetected) {
+                //body.velocity = new Vector2(speed,0);
 
-            anim.SetTrigger("chase");
-            transform.position = Vector2.MoveTowards(transform.position, targetPlayer.position, speed * Time.deltaTime);
+                anim.SetTrigger("chase");
+                transform.position = Vector2.MoveTowards(transform.position, targetPlayer.position, speed * Time.deltaTime);
 
-            if (transform.position.x > targetPlayer.position.x)
-                transform.localScale = new Vector2(-0.15f, 0.15f);
-            else 
+                if (transform.position.x > targetPlayer.position.x)
+                    transform.localScale = new Vector2(-0.15f, 0.15f);
+                else 
+                    transform.localScale = new Vector2(0.15f, 0.15f);
+            } //end if
+            else {
+                anim.SetTrigger("flap");
+                body.velocity = new Vector2(speed,0);
                 transform.localScale = new Vector2(0.15f, 0.15f);
+            } //end else
         } //end if
-        else {
-            anim.SetTrigger("flap");
-            body.velocity = new Vector2(speed,0);
-            transform.localScale = new Vector2(0.15f, 0.15f);
-        } //end else
 
+        //else the health script will dictate velocity
 
 
     } //end Update

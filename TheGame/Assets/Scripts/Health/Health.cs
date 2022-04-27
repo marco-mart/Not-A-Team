@@ -6,7 +6,7 @@ public class Health : MonoBehaviour
     private float currentHealth;
     private Animator anim;
     private bool dead = false;
-    private float wait;
+    private float wait = 0;
 
     private void Awake()
     {
@@ -16,10 +16,12 @@ public class Health : MonoBehaviour
     }
 
     private void Update() {
-        if (dead) {
+        if (dead && wait > 1f) {
             // start timer
-            wait += Time.deltaTime;
+           Destroy(gameObject);
         }
+        else if (dead && wait < 2f)
+            wait += Time.deltaTime;
     }
 
     public void TakeDamage(float damage) 
@@ -34,27 +36,29 @@ public class Health : MonoBehaviour
         {
             // hurt animation
             anim.SetTrigger("hurt");
+            
         }
 
         else
         {
-            if (!dead) 
-            {
-                // die animation
-                anim.SetTrigger("die");
-                if (gameObject.tag == "Player") {
-                    GetComponent<JohnSmith>().enabled = false;
-                }
-                else if (gameObject.tag == "Enemy") {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+            // die animation
+            anim.SetTrigger("die");
 
-                    // wait like 3 secs
-                    Destroy(gameObject);
-                }
-
-                dead = true;
+            if (gameObject.tag == "Player") {
+                GetComponent<JohnSmith>().enabled = false;
             }
-        }
-    }
+            else if (gameObject.tag == "Enemy") {
+
+                // wait like 3 secs
+                dead = true;
+                
+            }
+
+            
+            
+        } //end else
+    } //end takeDamage
 
     // get object's current health
     public float getCurrentHealth() {

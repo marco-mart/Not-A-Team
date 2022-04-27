@@ -34,7 +34,9 @@ public class BrusselsSprout : MonoBehaviour
         anim.SetBool("right", state == 1);
         anim.SetBool("left", state == -1);
 
-        body.velocity = new Vector2(Speed * state, body.velocity.y);
+        if (GetComponent<Health>().getCurrentHealth() > 0)
+            body.velocity = new Vector2(Speed * state, body.velocity.y);  
+            
 
         if (onWall() && turnCooldown > 0.3f)
         {
