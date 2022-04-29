@@ -20,7 +20,7 @@ public class fireball : MonoBehaviour
         Destroy(gameObject);
 
         if (hitInfo.CompareTag("Enemy")) {
-            Debug.Log(hitInfo.name);
+            //Debug.Log(hitInfo.name);
 
             if (hitInfo.name.StartsWith("Brussels")) {
                 BrusselsSprout enemy = hitInfo.GetComponent<BrusselsSprout>();
@@ -29,7 +29,7 @@ public class fireball : MonoBehaviour
             }
             else if (hitInfo.name.StartsWith("Book")) {
                 // book stuff
-                print("BOOK :D");
+                //print("BOOK :D");
                 Book enemy = hitInfo.GetComponent<Book>();
 
                 enemy.TakeDamage(damage);

@@ -62,7 +62,7 @@ public class JohnSmith : MonoBehaviour
             shootingCooldown += Time.deltaTime;
         } //end else
 
-        print("Shoot Cool: " + shootingCooldown);
+        //print("Shoot Cool: " + shootingCooldown);
         
     } // end Update
 
