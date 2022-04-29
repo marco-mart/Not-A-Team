@@ -8,7 +8,6 @@ public class Winner : MonoBehaviour
     public GameObject WinUI;
     public string Menu;
     public string restartLevel;
-    public string nextLevel;
     public GameObject JohnSmith;
     //private float menuCooldown;
     //public GameObject image;
@@ -40,7 +39,7 @@ public class Winner : MonoBehaviour
 
     public void Restart() {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(restartLevel);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     } //end restart
 
     public void LoadMenu() {
@@ -56,7 +55,7 @@ public class Winner : MonoBehaviour
     public void NextLevel() {
         print("No next level at this current time. Please try again later!");
         // Time.timeScale = 1f;
-        // SceneManager.LoadScene(nextLevel);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     } //end NextLevel
 
 } //end class
