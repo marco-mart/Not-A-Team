@@ -27,14 +27,14 @@ public class Book : MonoBehaviour
 
         far = Vector2.Distance(transform.position, targetPlayer.position);
 
-        print(far);
+        //print(far);
 
         if (far < distance)
             playerDetected = true;
         else    
             playerDetected = false;
 
-        print(playerDetected);
+        //print(playerDetected);
 
         if (GetComponent<Health>().getCurrentHealth() > 0) {
             if (playerDetected) {

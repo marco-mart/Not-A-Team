@@ -29,7 +29,7 @@ public class Health : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, startingHealth);
         
-        print(gameObject.name + "\nCurrent health = " + currentHealth);
+        //print(gameObject.name + "\nCurrent health = " + currentHealth);
 
 
         if (currentHealth > 0)
