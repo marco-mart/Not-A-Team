@@ -21,6 +21,7 @@ public class JohnSmith : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        body.position = new Vector2(8, 10);
 
         // get Stapler's shooting point
         shootingPoint = GameObject.Find("ShootingPoint");

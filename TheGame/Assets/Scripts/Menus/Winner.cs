@@ -53,9 +53,8 @@ public class Winner : MonoBehaviour
     }
 
     public void NextLevel() {
-        print("No next level at this current time. Please try again later!");
-        // Time.timeScale = 1f;
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     } //end NextLevel
 
 } //end class

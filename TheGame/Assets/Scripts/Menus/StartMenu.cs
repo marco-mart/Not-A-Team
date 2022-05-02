@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
     public string LevelSelect;
+    
     public void PlayGame() 
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(2);
     }
 
     public void LoadLevelSelect() {
-        print("There is currently no Level Select Screen. Please try again later!");
-        //SceneManager.LoadScene(LevelSelect);
+        SceneManager.LoadScene(LevelSelect);
     }
 
     public void QuitGame() {
