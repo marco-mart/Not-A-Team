@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour {
-    private static float health;
+    public static float health;
     public GameObject GameOverUI;
     public string Menu;
     public string Level;

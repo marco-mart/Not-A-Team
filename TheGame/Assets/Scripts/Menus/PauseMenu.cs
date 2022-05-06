@@ -20,7 +20,8 @@ public class PauseMenu : MonoBehaviour
             } //end if
             else
             {
-                Pause();
+                if (GameOver.health != 0)
+                    Pause();
             } //end else
         }//end if
     } //end Update
