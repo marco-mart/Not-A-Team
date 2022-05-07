@@ -95,7 +95,7 @@ none
 - The feaures that the menu offers, when toggled should cause the desired effect. (i.e. when sound is turned off/on, or restarting the level.
 
 
-# 7. "As a user, I want to hear a funny voice come from John Smith when doing some action, so that I can laugh (or be annoyed) when playing the game."
+# 7. "As a user, I want to hear a funny voice come from John Smith when doing some action, so that I can laugh (or be annoyed) when playing the game." (FUTURE WORK)
 
 ### Elaboration:
 Hopefully the latter. This idea was introduced at the conception of the game. In getting this feature added, the level of entertainment that the game will have for the user will be increased.
