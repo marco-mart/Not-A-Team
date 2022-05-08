@@ -12,3 +12,8 @@ Working on: "John Smith", a 2-d platformer game.
 2. Path: TheGame >> Builds >> Windows >> Installer
 3. Run "John Smith Setup (x86_64).exe
 
+
+# How to play John Smith
+- Arrow keys to move around
+- Mouse to click options in menu
+- Space to shoot staples
