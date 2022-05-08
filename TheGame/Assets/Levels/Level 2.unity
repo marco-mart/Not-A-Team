@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587272, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6759,8 +6759,8 @@ MonoBehaviour:
   WinUI: {fileID: 1701327451}
   Menu: StartMenu
   restartLevel: Level 1
-  JohnSmith: {fileID: 0}
-  JohnsDoor: {fileID: 0}
+  JohnSmith: {fileID: 450042461}
+  JohnsDoor: {fileID: 1481015389}
 --- !u!114 &1537068377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6776,7 +6776,7 @@ MonoBehaviour:
   GameOverUI: {fileID: 120142835}
   Menu: StartMenu
   Level: Level 1
-  JohnSmith: {fileID: 0}
+  JohnSmith: {fileID: 450042461}
   image: {fileID: 1020464985}
 --- !u!114 &1537068378
 MonoBehaviour:
