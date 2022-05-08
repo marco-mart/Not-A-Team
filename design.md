@@ -19,10 +19,17 @@ This is the most important class in the entire project. The John Smith class rea
 This class is really important to the game as well. Without it there would be no challenge. The Health class has 2 sub-classes that are the "Health bar" and the "Health Collectible". Both of these classes interact with the Health class so that John Smith's health is displayed correctly, and John Smith reacts accordingly when being dealt damage.
 
 ### Brussel Sprout
-This class is the only enemy in the game for now. The Brussel Sprout is the only object in the game (for now) that can deal damage to John Smith. This class does not rely on John Smith to function, but without John Smith, this class would have no purpose being in the game.
+One of the two enemies in the game, a rolling Brussels Sprout. This class is meant to damage/challenge the player. This class does not rely on John Smith to function, but without John Smith, this class would have no purpose being in the game.
+
+### Book
+One of the two enemies in the game, a flying book. This class is meant to damage/challenge the player. This class does not rely on John Smith to function, but without John Smith, this class would have no purpose in the game.
 
 ### Pause Menu
 This class allows the user to quit/pause the game anytime during gameplay. 
+
+### The Stapler
+The only weapon in the game. This class is used by the John Smith class to shoot enemies in the game.
+
 
 ### Additional Information
 - The game engine we use is Unity with C# as the scripting language. 
