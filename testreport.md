@@ -20,7 +20,7 @@ Complete
 
 3. As a user, I want to be able to fight enemies as John Smith, so that I make progress through the level.
 
-Incomplete
+Complete
 
 4. As a user, I want to be able to jump over obstacles and traps, so that I make progress through the level.
 
