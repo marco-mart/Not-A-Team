@@ -11,7 +11,7 @@ public class JohnSmith : MonoBehaviour
     private BoxCollider2D boxCollider;
     private float shootingCooldown = 0;
     private float horizontalInput;
-    bool facingRight = true;
+    private bool facingRight = true;
     private GameObject shootingPoint;
     
 

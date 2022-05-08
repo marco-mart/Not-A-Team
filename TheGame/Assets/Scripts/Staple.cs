@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class fireball : MonoBehaviour
+public class Staple : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D body;
